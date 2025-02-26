@@ -1,0 +1,32 @@
+General:
+    ListenAddress: 0.0.0.0
+    ListenPort: 7050
+    TLS:
+        Enabled: true
+        PrivateKey: /var/hyperledger/orderer/tls/server.key
+        Certificate: /var/hyperledger/orderer/tls/server.crt
+        RootCAs:
+          - /var/hyperledger/orderer/tls/ca.crt
+        ClientAuthRequired: false
+    Keepalive:
+        ServerMinInterval: 60s
+        ServerInterval: 7200s
+        ServerTimeout: 20s
+    LogLevel: INFO
+    LogFormat: '%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}'
+    GenesisMethod: file
+    GenesisFile: /var/hyperledger/orderer/orderer.genesis.block
+    LocalMSPDir: /var/hyperledger/orderer/msp
+    LocalMSPID: OrdererMSP
+    Profile:
+        Enabled: false
+        Address: 0.0.0.0:6060
+    BCCSP:
+        Default: SW
+        SW:
+            Hash: SHA2
+            Security: 256
+            FileKeyStore:
+                KeyStore:
+    Operations:
+        ListenAddress: 0.0.0.0:9443

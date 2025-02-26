@@ -1,0 +1,17 @@
+{
+  "name": "asset-transfer",
+  "version": "1.0.0",
+  "description": "Chaincode para gestión de activos con soporte para consultas enriquecidas de CouchDB",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fabric-contract-api": "^2.2.0",
+    "fabric-shim": "^2.2.0"
+  }
+}
